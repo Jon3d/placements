@@ -13,13 +13,14 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 
+
 import 'components/Components.scss';
 
 function preventDefault(event) {
   event.preventDefault();
 }
 
-export default function LineItems({ data, pagination, setPage, setCount, sort, setSort }) {
+export default function LineItems({ data, pagination, setPage, setCount, sort, setSort, loading, exportFile }) {
   const USDollar = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
@@ -55,6 +56,20 @@ export default function LineItems({ data, pagination, setPage, setCount, sort, s
     );
   }
 
+  const getDownloadLink = () => {
+    const DownloadIcon = loading ? CircularProgress : CloudDownloadIcon;
+    return (
+      <>
+        <DownloadIcon onClick={(e) => exportFile(e, 'csv')} />
+        <span className='download-links'>
+          <a className='seperate-links' onClick={(e) => exportFile(e, 'csv')}>csv</a>
+          &nbsp;
+          <a className='seperate-links' onClick={(e) => exportFile(e, 'xlsx')}>xlsx</a>
+        </span>
+      </>
+    )
+  }
+
   const renderData = () => {
     if (!data || data === null) return [];
     return data.map((row) => (
@@ -74,7 +89,7 @@ export default function LineItems({ data, pagination, setPage, setCount, sort, s
       <Title>
         Campaigns
         <span className='download-campaign-data'>
-          <CloudDownloadIcon />
+          {getDownloadLink()}
         </span>
       </Title>
 

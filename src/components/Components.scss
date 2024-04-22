@@ -1,8 +1,20 @@
 #pio-table-wrapper {
   .download-campaign-data {
     float: right;
-    margin-right: 30px;
-    top: -20px;
+    margin-right: 15px;
+    top: -8px;
+
+    .download-links {
+      position: relative;
+      top: -7px;
+      font-size: 12px;
+      padding: 5px;
+    }
+
+    .seperate-links:hover {
+      text-decoration: underline;
+      cursor: grab;
+    }
   }
 
   .download-campaign-data:hover {
@@ -11,7 +23,6 @@
 
   #table-column-header {
     position: relative;
-    // top: -5px;
     white-space: nowrap;
 
     .name-text-selected {
@@ -29,15 +40,15 @@
     }
 
     .name-text-selected:hover {
-      text-decoration: underline darkslategray //This colour is an example
+      text-decoration: underline darkslategray;
     }
 
     .name-text:hover {
-      text-decoration: underline darkslategray //This colour is an example
+      text-decoration: underline darkslategray;
     }
 
     .sort-direction-arrow:hover {
-      text-decoration: underline darkslategray //This colour is an example
+      text-decoration: underline darkslategray;
     }
   }
 }

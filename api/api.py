@@ -1,5 +1,6 @@
 import simplejson as json
 import copy
+import flask_excel as excel
 
 from functools import reduce
 from flask import Flask, Response, request
@@ -107,9 +108,27 @@ def create_app(config):
     retdata = [item for item in data if item[attr_name] == attr_value_string or item[attr_name] == attr_value_number]
     return Response(response=json.dumps(retdata), status=200,  mimetype='application/json')
   
+  @app.route("/api/data/export", methods=['GET'])
+  def export_records():
+      # Supports xlsx, and csv
+      type = request.args.get('type', default = 'csv', type = str)
+      rData = [['Campaign ID', 'Campaign Name', 'Line Item Name', 'Booked Amount', 'Actual Amount', 'Adjustments']];
+      for line in data:
+        row = [
+          line['campaign_id'],
+          line['campaign_name'],
+          line['line_item_name'],
+          getDecimal(line['booked_amount']),
+          getDecimal(line['actual_amount']),
+          getDecimal(line['adjustments'])
+        ]
+        rData.append(row)
+      return excel.make_response_from_array(rData, type, file_name="export_data")
+  
   return app
   
 app = create_app({'TESTING': False})
+excel.init_excel(app)
 
 if __name__ == '__main__':
     app.run()

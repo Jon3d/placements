@@ -17,10 +17,10 @@ import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import { mainListItems, secondaryListItems } from './listItems';
-import Chart from './Chart';
-import Deposits from './Deposits';
-import LineItems from './LineItems';
+import { mainListItems, secondaryListItems } from './components/listItems';
+import Chart from './components/Chart';
+import Deposits from './components/Deposits';
+import LineItems from './components/LineItems';
 import { DataAPI } from 'services';
 
 function Copyright(props) {
@@ -91,7 +91,7 @@ export default function PageLayout() {
   const [total, setTotal] = useState(null);
   const [open, setOpen] = useState(true);
   const [sort, setSort] = useState({ key: 'campaign_id', reverse: false });
-  let initialLoad = true;
+  const [loading, setLoading] = useState(false);
   const api = new DataAPI();
 
   useEffect(() => {
@@ -105,7 +105,6 @@ export default function PageLayout() {
         ...(sort.reverse && { reverse: true }) //Include reverse key only if reversed
       }
       const r = await api.getData(params);
-      console.info('r', r);
       setData(r.data);
       setStart(r.start);
       setSize(r.size);
@@ -121,13 +120,22 @@ export default function PageLayout() {
   };
 
   const setPage = (e, newPage) => {
+    e.preventDefault();
     setStart(newPage * size);
   };
 
   const setDataSize = (e) => {
+    e.preventDefault();
     const count = parseInt(e.target.value, 10);
     setSize(count);
     setStart(0);
+  }
+
+  const exportFile = async (e, type) => {
+    e.preventDefault();
+    setLoading(true);
+    await api.exportFile(type);
+    setLoading(false);
   }
 
   return (
@@ -239,6 +247,8 @@ export default function PageLayout() {
                     setCount={setDataSize}
                     sort={sort}
                     setSort={setSort}
+                    loading={loading}
+                    exportFile={exportFile}
                   />
                 </Paper>
               </Grid>

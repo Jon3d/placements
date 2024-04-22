@@ -7,7 +7,7 @@ export default class {
 
     const axiosConfig = {
       baseURL: `${this.basePath}/api`,
-      timeout: 300,
+      timeout: 1000,
     };
 
     this.client = axios.create(axiosConfig);
@@ -27,6 +27,19 @@ export default class {
     const queryString = Object.entries(params).map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join("&");
     const response = await this.client(`/data?${queryString}`);
     return response.data;
+  }
+
+  async exportFile(type = 'csv') {
+    const config = { responseType: 'blob' };
+    const response = await this.client.get(`/data/export?type=${type}`, config);
+    const blob = new Blob([response.data], {
+      type: response.headers["content-type"],
+    });
+    const link = document.createElement("a");
+    link.href = window.URL.createObjectURL(blob);
+    link.download = `campaign_data_${new Date().toISOString()}.${type}`;
+    link.click();
+    link.remove();
   }
 
   getArticleById(id) {
