@@ -1,0 +1,686 @@
+[
+  {
+    "id": 1,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Awesome Plastic Car - 6475",
+    "booked_amount": 430706.6871532752,
+    "actual_amount": 401966.50504006835,
+    "adjustments": 1311.0731142230268
+  },
+  {
+    "id": 2,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Fantastic Plastic Shirt - 278c",
+    "booked_amount": 242951.09516407287,
+    "actual_amount": 244249.26860341238,
+    "adjustments": -2550.0901180359815
+  },
+  {
+    "id": 3,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Small Steel Gloves - 711b",
+    "booked_amount": 167541.33794846805,
+    "actual_amount": 163576.8124862435,
+    "adjustments": 2278.0670838042115
+  },
+  {
+    "id": 4,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Ergonomic Rubber Computer - 2ea5",
+    "booked_amount": 368649.0272179125,
+    "actual_amount": 403259.0235555895,
+    "adjustments": 0.0
+  },
+  {
+    "id": 5,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Sleek Rubber Gloves - bafc",
+    "booked_amount": 760578.3260056116,
+    "actual_amount": 837364.9545711188,
+    "adjustments": 0.0
+  },
+  {
+    "id": 6,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Practical Plastic Hat - 17fd",
+    "booked_amount": 595375.1485823743,
+    "actual_amount": 641996.2003868966,
+    "adjustments": 0.0
+  },
+  {
+    "id": 7,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Rustic Wooden Shoes - a365",
+    "booked_amount": 704137.1452722424,
+    "actual_amount": 698863.8288846993,
+    "adjustments": -34361.26357435764
+  },
+  {
+    "id": 8,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Rustic Cotton Car - c7e4",
+    "booked_amount": 479225.1719527728,
+    "actual_amount": 500751.8220778274,
+    "adjustments": -10174.425131297243
+  },
+  {
+    "id": 9,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Fantastic Steel Pants - b17a",
+    "booked_amount": 117549.66171982384,
+    "actual_amount": 111713.06793451903,
+    "adjustments": -1159.0752874795955
+  },
+  {
+    "id": 10,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Small Rubber Shirt - 03ee",
+    "booked_amount": 645269.6058038301,
+    "actual_amount": 570009.8649704285,
+    "adjustments": 13871.68621317412
+  },
+  {
+    "id": 11,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Intelligent Cotton Pants - 5038",
+    "booked_amount": 75462.08721676095,
+    "actual_amount": 67863.19602111439,
+    "adjustments": -1477.5139081336238
+  },
+  {
+    "id": 12,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Gorgeous Rubber Pants - 4617",
+    "booked_amount": 345204.6177664357,
+    "actual_amount": 360687.00628580764,
+    "adjustments": 0.0
+  },
+  {
+    "id": 13,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Gorgeous Steel Computer - 0445",
+    "booked_amount": 698634.6720406126,
+    "actual_amount": 681763.2820301985,
+    "adjustments": 32373.29511535905
+  },
+  {
+    "id": 14,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Awesome Concrete Car - 13fa",
+    "booked_amount": 145997.6540145481,
+    "actual_amount": 142309.37889988488,
+    "adjustments": 6184.763926400789
+  },
+  {
+    "id": 15,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Awesome Granite Table - a580",
+    "booked_amount": 356973.979758046,
+    "actual_amount": 314433.9832577668,
+    "adjustments": 16933.421720968614
+  },
+  {
+    "id": 16,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Intelligent Concrete Gloves - 2a3a",
+    "booked_amount": 642509.6100708398,
+    "actual_amount": 566640.1167288311,
+    "adjustments": 15142.123318225098
+  },
+  {
+    "id": 17,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Intelligent Wooden Hat - ded4",
+    "booked_amount": 241638.8811304927,
+    "actual_amount": 227905.27114232452,
+    "adjustments": 0.0
+  },
+  {
+    "id": 18,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Incredible Concrete Chair - 480f",
+    "booked_amount": 183569.08447063103,
+    "actual_amount": 201399.1382276513,
+    "adjustments": 0.0
+  },
+  {
+    "id": 19,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Practical Plastic Shirt - 24a4",
+    "booked_amount": 551638.0819151852,
+    "actual_amount": 581728.1820662585,
+    "adjustments": 0.0
+  },
+  {
+    "id": 20,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Small Concrete Car - 2f6a",
+    "booked_amount": 497334.75265548675,
+    "actual_amount": 469804.6042743097,
+    "adjustments": 0.0
+  },
+  {
+    "id": 21,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Gorgeous Cotton Gloves - af47",
+    "booked_amount": 213071.72309743127,
+    "actual_amount": 223590.11610111129,
+    "adjustments": 0.0
+  },
+  {
+    "id": 22,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Fantastic Wooden Pants - f445",
+    "booked_amount": 429078.3991230032,
+    "actual_amount": 0.0,
+    "adjustments": -1099.0475257780665
+  },
+  {
+    "id": 23,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Gorgeous Plastic Shirt - fe12",
+    "booked_amount": 394225.0681140225,
+    "actual_amount": 350912.61892440444,
+    "adjustments": 11490.422815273512
+  },
+  {
+    "id": 24,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Small Granite Shoes - ef8c",
+    "booked_amount": 77005.2500764048,
+    "actual_amount": 73845.9370263574,
+    "adjustments": 4456.9876310290165
+  },
+  {
+    "id": 25,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Practical Rubber Table - e065",
+    "booked_amount": 728838.5541692758,
+    "actual_amount": 657491.2624931175,
+    "adjustments": 38292.740128746664
+  },
+  {
+    "id": 26,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Awesome Rubber Shoes - d533",
+    "booked_amount": 489777.13035574846,
+    "actual_amount": 529546.6500539848,
+    "adjustments": 0.0
+  },
+  {
+    "id": 27,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Intelligent Rubber Hat - c5a3",
+    "booked_amount": 126923.74183147737,
+    "actual_amount": 133194.6422709781,
+    "adjustments": 1681.666847455133
+  },
+  {
+    "id": 28,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Ergonomic Granite Computer - 7047",
+    "booked_amount": 301144.97080435377,
+    "actual_amount": 276845.53536872414,
+    "adjustments": 20269.540414948817
+  },
+  {
+    "id": 29,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Awesome Concrete Chair - 72d7",
+    "booked_amount": 536235.3019094203,
+    "actual_amount": 541656.9621915575,
+    "adjustments": 17676.476053619637
+  },
+  {
+    "id": 30,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Incredible Rubber Shoes - cd3f",
+    "booked_amount": 911298.3101941095,
+    "actual_amount": 0.0,
+    "adjustments": 24183.840210055798
+  },
+  {
+    "id": 31,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Awesome Granite Car - 0e17",
+    "booked_amount": 711365.4901666228,
+    "actual_amount": 715974.513114209,
+    "adjustments": 34124.24936726702
+  },
+  {
+    "id": 32,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Fantastic Steel Pants - 1b20",
+    "booked_amount": 907398.7555818125,
+    "actual_amount": 982595.8347821768,
+    "adjustments": -25088.394999060245
+  },
+  {
+    "id": 33,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Awesome Concrete Computer - 4d2d",
+    "booked_amount": 77064.77113683408,
+    "actual_amount": 68258.31112653529,
+    "adjustments": -1220.2507927707811
+  },
+  {
+    "id": 34,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Practical Steel Computer - 0d9f",
+    "booked_amount": 676658.8931040519,
+    "actual_amount": 675028.5595743171,
+    "adjustments": 0.0
+  },
+  {
+    "id": 35,
+    "campaign_id": 1,
+    "campaign_name": "Satterfield-Turcotte : Multi-channelled next generation analyzer - e550",
+    "line_item_name": "Small Wooden Computer - 8c6d",
+    "booked_amount": 875449.3657976737,
+    "actual_amount": 969912.1963626008,
+    "adjustments": -13423.143355653474
+  },
+  {
+    "id": 36,
+    "campaign_id": 2,
+    "campaign_name": "Shanahan, Homenick and Purdy : Reactive incremental migration - 81db",
+    "line_item_name": "Fantastic Granite Hat - 42cc",
+    "booked_amount": 617687.6273456443,
+    "actual_amount": 643308.8871557572,
+    "adjustments": 35466.90013675345
+  },
+  {
+    "id": 37,
+    "campaign_id": 2,
+    "campaign_name": "Shanahan, Homenick and Purdy : Reactive incremental migration - 81db",
+    "line_item_name": "Incredible Plastic Hat - 7101",
+    "booked_amount": 410785.6854867741,
+    "actual_amount": 419937.39176046196,
+    "adjustments": -14380.071956024107
+  },
+  {
+    "id": 38,
+    "campaign_id": 2,
+    "campaign_name": "Shanahan, Homenick and Purdy : Reactive incremental migration - 81db",
+    "line_item_name": "Gorgeous Steel Shirt - 9f4d",
+    "booked_amount": 989012.5938320399,
+    "actual_amount": 993273.6456328593,
+    "adjustments": 55642.81935432583
+  },
+  {
+    "id": 39,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Intelligent Cotton Shoes - f7fd",
+    "booked_amount": 644467.2997317011,
+    "actual_amount": 592123.9166268215,
+    "adjustments": -6178.946757039475
+  },
+  {
+    "id": 40,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Sleek Granite Pants - 3dd2",
+    "booked_amount": 232266.59177616937,
+    "actual_amount": 236436.64786707534,
+    "adjustments": 0.0
+  },
+  {
+    "id": 41,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Fantastic Concrete Shirt - 8729",
+    "booked_amount": 710379.9996722677,
+    "actual_amount": 699772.3214580852,
+    "adjustments": 38451.751391308164
+  },
+  {
+    "id": 42,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Intelligent Cotton Table - 881a",
+    "booked_amount": 934005.1909701052,
+    "actual_amount": 932882.7996024945,
+    "adjustments": 16674.879259227622
+  },
+  {
+    "id": 43,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Gorgeous Wooden Hat - 2722",
+    "booked_amount": 945668.5335218856,
+    "actual_amount": 867075.5074833848,
+    "adjustments": -38437.6485672441
+  },
+  {
+    "id": 44,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Small Rubber Hat - 9f25",
+    "booked_amount": 825477.1337720406,
+    "actual_amount": 843310.4293473002,
+    "adjustments": 25193.811030769062
+  },
+  {
+    "id": 45,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Fantastic Steel Computer - 105c",
+    "booked_amount": 932531.2429466128,
+    "actual_amount": 1027426.5159942464,
+    "adjustments": -13815.140427011074
+  },
+  {
+    "id": 46,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Ergonomic Granite Gloves - 179d",
+    "booked_amount": 861931.790714526,
+    "actual_amount": 840156.2638612026,
+    "adjustments": -6301.8207687341865
+  },
+  {
+    "id": 47,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Practical Wooden Shoes - fd70",
+    "booked_amount": 329356.39051023556,
+    "actual_amount": 318894.5350129608,
+    "adjustments": -1416.6124239198055
+  },
+  {
+    "id": 48,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Awesome Steel Shirt - 5cca",
+    "booked_amount": 801457.5044855115,
+    "actual_amount": 840053.1472569909,
+    "adjustments": 0.0
+  },
+  {
+    "id": 49,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Gorgeous Plastic Computer - 9b9d",
+    "booked_amount": 248967.7735799577,
+    "actual_amount": 258320.87378446982,
+    "adjustments": 12357.171845095272
+  },
+  {
+    "id": 50,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Practical Cotton Computer - 8114",
+    "booked_amount": 218668.1295363957,
+    "actual_amount": 196913.1112862048,
+    "adjustments": 11567.423944356133
+  },
+  {
+    "id": 51,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Incredible Rubber Hat - 426c",
+    "booked_amount": 623088.352273128,
+    "actual_amount": 681114.3846751038,
+    "adjustments": -17284.96751284714
+  },
+  {
+    "id": 52,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Practical Rubber Gloves - ebcc",
+    "booked_amount": 331925.5481777076,
+    "actual_amount": 293715.28639762424,
+    "adjustments": 21638.72276244666
+  },
+  {
+    "id": 53,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Sleek Plastic Shirt - e2e0",
+    "booked_amount": 218364.26545233256,
+    "actual_amount": 237213.60318673754,
+    "adjustments": -10678.580540895256
+  },
+  {
+    "id": 54,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Gorgeous Rubber Gloves - 4e57",
+    "booked_amount": 924476.5600620883,
+    "actual_amount": 903106.0119046944,
+    "adjustments": 0.0
+  },
+  {
+    "id": 55,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Fantastic Rubber Chair - bc4a",
+    "booked_amount": 21310.05907696015,
+    "actual_amount": 19121.21052378302,
+    "adjustments": -526.0817328061452
+  },
+  {
+    "id": 56,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Practical Plastic Chair - 6791",
+    "booked_amount": 601461.9322661802,
+    "actual_amount": 622588.435412853,
+    "adjustments": -9966.424098631147
+  },
+  {
+    "id": 57,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Awesome Cotton Hat - cc2a",
+    "booked_amount": 432753.1035324513,
+    "actual_amount": 448891.6607834475,
+    "adjustments": 0.0
+  },
+  {
+    "id": 58,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Practical Plastic Table - db6f",
+    "booked_amount": 129258.26201904922,
+    "actual_amount": 124417.20401828717,
+    "adjustments": -3509.7878990616023
+  },
+  {
+    "id": 59,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Gorgeous Granite Chair - d97f",
+    "booked_amount": 810816.2645308994,
+    "actual_amount": 798105.8810556306,
+    "adjustments": -32896.80444426216
+  },
+  {
+    "id": 60,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Rustic Cotton Gloves - 306b",
+    "booked_amount": 741583.2626710571,
+    "actual_amount": 0.0,
+    "adjustments": 27714.65180332975
+  },
+  {
+    "id": 61,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Incredible Rubber Shoes - c0b9",
+    "booked_amount": 765639.7092592319,
+    "actual_amount": 782966.894820014,
+    "adjustments": 22001.36988569374
+  },
+  {
+    "id": 62,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Fantastic Rubber Gloves - d72a",
+    "booked_amount": 248686.27884032612,
+    "actual_amount": 0.0,
+    "adjustments": -10971.02659132706
+  },
+  {
+    "id": 63,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Rustic Concrete Computer - a5d9",
+    "booked_amount": 181007.18262699456,
+    "actual_amount": 166852.32769089733,
+    "adjustments": -3941.9442433937575
+  },
+  {
+    "id": 64,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Ergonomic Wooden Pants - 74ae",
+    "booked_amount": 358833.52405816736,
+    "actual_amount": 364431.28267560777,
+    "adjustments": 0.0
+  },
+  {
+    "id": 65,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Gorgeous Granite Hat - b6ae",
+    "booked_amount": 937066.1592086646,
+    "actual_amount": 0.0,
+    "adjustments": 10165.214014410602
+  },
+  {
+    "id": 66,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Incredible Wooden Computer - 0079",
+    "booked_amount": 102227.9132607784,
+    "actual_amount": 105053.66904013453,
+    "adjustments": 0.0
+  },
+  {
+    "id": 67,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Intelligent Granite Shoes - 6aff",
+    "booked_amount": 248819.98621985503,
+    "actual_amount": 227769.36018726067,
+    "adjustments": 0.0
+  },
+  {
+    "id": 68,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Practical Steel Table - 2f8b",
+    "booked_amount": 972054.3358724569,
+    "actual_amount": 1025010.2940814258,
+    "adjustments": -31008.224575015745
+  },
+  {
+    "id": 69,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Gorgeous Rubber Gloves - 0a2a",
+    "booked_amount": 791534.9346784434,
+    "actual_amount": 698914.4504033325,
+    "adjustments": 47781.578823506105
+  },
+  {
+    "id": 70,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Incredible Steel Table - bc45",
+    "booked_amount": 282849.4341641974,
+    "actual_amount": 258271.39897460229,
+    "adjustments": 0.0
+  },
+  {
+    "id": 71,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Sleek Rubber Shirt - 2c06",
+    "booked_amount": 650200.2649847947,
+    "actual_amount": 628693.0523226194,
+    "adjustments": 32151.358482852458
+  },
+  {
+    "id": 72,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Practical Concrete Table - dbd7",
+    "booked_amount": 109430.2332571011,
+    "actual_amount": 99329.17480343794,
+    "adjustments": 5014.033990099999
+  },
+  {
+    "id": 73,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Intelligent Rubber Hat - d01e",
+    "booked_amount": 85640.59943260327,
+    "actual_amount": 89713.51010525388,
+    "adjustments": -1213.2912483451207
+  },
+  {
+    "id": 74,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Ergonomic Rubber Table - 6b53",
+    "booked_amount": 575826.043749406,
+    "actual_amount": 518040.36575906986,
+    "adjustments": 13231.287420664667
+  },
+  {
+    "id": 75,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Gorgeous Plastic Shirt - 8994",
+    "booked_amount": 298506.9379731828,
+    "actual_amount": 269086.1337413134,
+    "adjustments": 0.0
+  },
+  {
+    "id": 76,
+    "campaign_id": 3,
+    "campaign_name": "Rath-Yundt : Vision-oriented bottom-line knowledge base - 5126",
+    "line_item_name": "Rustic Plastic Pants - 1f1f",
+    "booked_amount": 950860.8531925486,
+    "actual_amount": 995465.5052476497,
+    "adjustments": 44866.829290976835
+  }
+]

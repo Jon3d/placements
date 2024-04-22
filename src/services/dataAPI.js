@@ -13,9 +13,20 @@ export default class {
     this.client = axios.create(axiosConfig);
   }
 
-  async getData(options) {
-    const response = await this.client('/data');
-    console.info('response', response);
+  /**
+   * Data fetch
+   * @params
+   *  url params object, valid params are
+   *  size: default 10
+   *  start: default 0
+   *  sort: column name to sort on, default campaign_id
+   *  reverse: reverse sort direction, default false
+   * @returns [lineItemObj] Returns array of line items
+   */
+  async getData(params = {}) {
+    const queryString = Object.entries(params).map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join("&");
+    const response = await this.client(`/data?${queryString}`);
+    return response.data;
   }
 
   getArticleById(id) {

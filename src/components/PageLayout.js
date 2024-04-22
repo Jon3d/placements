@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import MuiDrawer from '@mui/material/Drawer';
@@ -20,7 +20,7 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import { mainListItems, secondaryListItems } from './listItems';
 import Chart from './Chart';
 import Deposits from './Deposits';
-import Orders from './Orders';
+import LineItems from './LineItems';
 import { DataAPI } from 'services';
 
 function Copyright(props) {
@@ -82,20 +82,53 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
   }),
 );
 
-// TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
 export default function PageLayout() {
-  async function getData() {
-    const api = new DataAPI();
-    console.info('api', api);
-    const data = await api.getData();
-    console.info('data', data);
-  }
-  const [open, setOpen] = React.useState(true);
+  const [data, setData] = useState(null);
+  const [start, setStart] = useState(0);
+  const [size, setSize] = useState(10);
+  const [total, setTotal] = useState(null);
+  const [open, setOpen] = useState(true);
+  const [sort, setSort] = useState({ key: 'campaign_id', reverse: false });
+  let initialLoad = true;
+  const api = new DataAPI();
+
+  useEffect(() => {
+    const status = { mounted: true };
+    (async () => {
+      // Can run twice on initial load in development mode, this shouldn't happen in prod
+      const params = {
+        size,
+        start,
+        sort: sort.key,
+        ...(sort.reverse && { reverse: true }) //Include reverse key only if reversed
+      }
+      const r = await api.getData(params);
+      console.info('r', r);
+      setData(r.data);
+      setStart(r.start);
+      setSize(r.size);
+      setTotal(r.total);
+    })();
+    return () => {
+      status.mounted = false;
+    };
+  }, [start, size, sort]);
+
   const toggleDrawer = () => {
     setOpen(!open);
   };
+
+  const setPage = (e, newPage) => {
+    setStart(newPage * size);
+  };
+
+  const setDataSize = (e) => {
+    const count = parseInt(e.target.value, 10);
+    setSize(count);
+    setStart(0);
+  }
 
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -199,7 +232,14 @@ export default function PageLayout() {
               {/* Recent Orders */}
               <Grid item xs={12}>
                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                  <Orders />
+                  <LineItems
+                    data={data}
+                    pagination={{ start, size, total }}
+                    setPage={setPage}
+                    setCount={setDataSize}
+                    sort={sort}
+                    setSort={setSort}
+                  />
                 </Paper>
               </Grid>
             </Grid>

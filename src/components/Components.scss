@@ -1,0 +1,43 @@
+#pio-table-wrapper {
+  .download-campaign-data {
+    float: right;
+    margin-right: 30px;
+    top: -20px;
+  }
+
+  .download-campaign-data:hover {
+    color: darkslategray;
+  }
+
+  #table-column-header {
+    position: relative;
+    // top: -5px;
+    white-space: nowrap;
+
+    .name-text-selected {
+      position: relative;
+      top: -3px;
+    }
+
+    .sort-direction-arrow {
+      margin-left: 10px;
+      width: 18px;
+      position: relative;
+      right: 2px;
+      top: 5px;
+      color: #1B76D2;
+    }
+
+    .name-text-selected:hover {
+      text-decoration: underline darkslategray //This colour is an example
+    }
+
+    .name-text:hover {
+      text-decoration: underline darkslategray //This colour is an example
+    }
+
+    .sort-direction-arrow:hover {
+      text-decoration: underline darkslategray //This colour is an example
+    }
+  }
+}
