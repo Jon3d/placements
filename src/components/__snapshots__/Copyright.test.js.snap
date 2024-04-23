@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Copyright correctly 1`] = `
+<p
+  className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter css-1vl95ex-MuiTypography-root"
+>
+  Copyright © 
+  <a
+    className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-xdxgn1-MuiTypography-root-MuiLink-root"
+    href="https://mui.com/"
+    onBlur={[Function]}
+    onFocus={[Function]}
+  >
+    Your Website
+  </a>
+   
+  2024
+  .
+</p>
+`;

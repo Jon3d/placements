@@ -1,0 +1,427 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders GridComponent correctly 1`] = `
+<span
+  id="pio-table-wrapper"
+>
+  <h2
+    className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-gi7hi0-MuiTypography-root"
+  >
+    Campaigns
+    <span
+      className="download-campaign-data"
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+        data-testid="CloudDownloadIcon"
+        focusable="false"
+        onClick={[Function]}
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M17 13l-5 5-5-5h3V9h4v4z"
+        />
+      </svg>
+      <span
+        className="download-links"
+      >
+        <a
+          className="seperate-links"
+          onClick={[Function]}
+        >
+          csv
+        </a>
+         
+        <a
+          className="seperate-links"
+          onClick={[Function]}
+        >
+          xlsx
+        </a>
+      </span>
+    </span>
+  </h2>
+  <div
+    className="MuiDataGrid-root MuiDataGrid-root--densityStandard MuiDataGrid-withBorderColor css-n3fyjk-MuiDataGrid-root"
+  >
+    <div
+      className="css-qtdhae"
+      data-id="gridPanelAnchor"
+      role="presentation"
+    />
+    <div
+      aria-colcount={0}
+      aria-multiselectable={false}
+      aria-rowcount={1}
+      className="MuiDataGrid-main css-3eek4p-MuiDataGrid-main"
+      role="grid"
+      tabIndex={-1}
+    >
+      <div
+        className="MuiDataGrid-virtualScroller css-1793420-MuiDataGrid-virtualScroller"
+        onScroll={[Function]}
+        onTouchMove={[Function]}
+        onWheel={[Function]}
+        role="presentation"
+        style={
+          Object {
+            "overflowX": "hidden",
+            "overflowY": undefined,
+          }
+        }
+        tabIndex={-1}
+      >
+        <div
+          className="MuiDataGrid-topContainer MuiDataGrid-container--top css-1oudwrl"
+          role="presentation"
+        >
+          <div
+            className="MuiDataGrid-columnHeaders css-1pmk00y-MuiDataGrid-columnHeaders"
+            role="presentation"
+          >
+            <div
+              aria-rowindex={1}
+              className="css-yrdy0g-MuiDataGrid-columnHeaderRow"
+              role="row"
+            >
+              <div
+                role="presentation"
+                style={
+                  Object {
+                    "width": 0,
+                  }
+                }
+              />
+              <div
+                className="MuiDataGrid-filler"
+                role="presentation"
+              />
+              <div
+                className="MuiDataGrid-scrollbarFiller MuiDataGrid-scrollbarFiller--header"
+                role="presentation"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiDataGrid-overlayWrapper css-74bi4q-MuiDataGrid-overlayWrapper"
+        >
+          <div
+            className="MuiDataGrid-overlayWrapperInner css-1akuw9y-MuiDataGrid-overlayWrapperInner"
+            style={
+              Object {
+                "height": -56,
+                "width": 0,
+              }
+            }
+          >
+            <div
+              className="MuiDataGrid-overlay css-1w53k9d-MuiDataGrid-overlay"
+            >
+              No rows
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiDataGrid-virtualScrollerContent css-1kwdphh-MuiDataGrid-virtualScrollerContent"
+          role="presentation"
+          style={
+            Object {
+              "height": 1,
+              "width": "auto",
+            }
+          }
+        >
+          <div
+            className="MuiDataGrid-virtualScrollerRenderZone css-s1v7zr-MuiDataGrid-virtualScrollerRenderZone"
+            role="rowgroup"
+            style={
+              Object {
+                "transform": "translate3d(0, 0px, 0)",
+              }
+            }
+          />
+        </div>
+        <div
+          className="MuiDataGrid-bottomContainer MuiDataGrid-container--bottom css-14egwce"
+          role="presentation"
+        />
+      </div>
+    </div>
+    <div
+      className="MuiDataGrid-footerContainer MuiDataGrid-withBorderColor css-wop1k0-MuiDataGrid-footerContainer"
+    >
+      <div />
+      <div
+        className="MuiTablePagination-root css-rtrcn9-MuiTablePagination-root"
+      >
+        <div
+          className="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular MuiTablePagination-toolbar css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar"
+        >
+          <div
+            className="MuiTablePagination-spacer css-1psng7p-MuiTablePagination-spacer"
+          />
+          <p
+            className="MuiTablePagination-selectLabel css-pdct74-MuiTablePagination-selectLabel"
+            id=":r4:"
+          >
+            Rows per page:
+          </p>
+          <div
+            className="MuiInputBase-root MuiInputBase-colorPrimary MuiTablePagination-input css-16c50h-MuiInputBase-root-MuiTablePagination-select"
+            onClick={[Function]}
+          >
+            <div
+              aria-controls=":r5:"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby=":r4: :r3:"
+              className="MuiSelect-select MuiTablePagination-select MuiSelect-standard MuiInputBase-input css-194a1fa-MuiSelect-select-MuiInputBase-input"
+              id=":r3:"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onMouseDown={[Function]}
+              role="combobox"
+              tabIndex={0}
+            >
+              100
+            </div>
+            <input
+              aria-hidden={true}
+              aria-invalid={false}
+              className="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              disabled={false}
+              onAnimationStart={[Function]}
+              onChange={[Function]}
+              tabIndex={-1}
+              value={100}
+            />
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiTablePagination-selectIcon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+          <p
+            className="MuiTablePagination-displayedRows css-levciy-MuiTablePagination-displayedRows"
+          >
+            0–0 of 0
+          </p>
+          <div
+            className="MuiTablePagination-actions"
+          >
+            <button
+              aria-label="Go to previous page"
+              className="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeMedium css-zylse7-MuiButtonBase-root-MuiIconButton-root"
+              disabled={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={-1}
+              title="Go to previous page"
+              type="button"
+            >
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="KeyboardArrowLeftIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Go to next page"
+              className="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeMedium css-zylse7-MuiButtonBase-root-MuiIconButton-root"
+              disabled={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={-1}
+              title="Go to next page"
+              type="button"
+            >
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="KeyboardArrowRightIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiTablePagination-root css-jtlhu6-MuiTablePagination-root"
+  >
+    <div
+      className="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular MuiTablePagination-toolbar css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar"
+    >
+      <div
+        className="MuiTablePagination-spacer css-1psng7p-MuiTablePagination-spacer"
+      />
+      <p
+        className="MuiTablePagination-selectLabel css-pdct74-MuiTablePagination-selectLabel"
+        id=":r1:"
+      >
+        Rows per page:
+      </p>
+      <div
+        className="MuiInputBase-root MuiInputBase-colorPrimary MuiTablePagination-input css-16c50h-MuiInputBase-root-MuiTablePagination-select"
+        onClick={[Function]}
+      >
+        <div
+          aria-controls=":r2:"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          aria-labelledby=":r1: :r0:"
+          className="MuiSelect-select MuiTablePagination-select MuiSelect-standard MuiInputBase-input css-194a1fa-MuiSelect-select-MuiInputBase-input"
+          id=":r0:"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onMouseDown={[Function]}
+          role="combobox"
+          tabIndex={0}
+        >
+          10
+        </div>
+        <input
+          aria-hidden={true}
+          aria-invalid={false}
+          className="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+          disabled={false}
+          onAnimationStart={[Function]}
+          onChange={[Function]}
+          tabIndex={-1}
+          value={10}
+        />
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiTablePagination-selectIcon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+          data-testid="ArrowDropDownIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
+      <p
+        className="MuiTablePagination-displayedRows css-levciy-MuiTablePagination-displayedRows"
+      >
+        0–0 of 0
+      </p>
+      <div
+        className="MuiTablePagination-actions"
+      >
+        <button
+          aria-label="Go to previous page"
+          className="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeMedium css-zylse7-MuiButtonBase-root-MuiIconButton-root"
+          disabled={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={-1}
+          title="Go to previous page"
+          type="button"
+        >
+          <svg
+            aria-hidden={true}
+            className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="KeyboardArrowLeftIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"
+            />
+          </svg>
+        </button>
+        <button
+          aria-label="Go to next page"
+          className="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeMedium css-zylse7-MuiButtonBase-root-MuiIconButton-root"
+          disabled={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={-1}
+          title="Go to next page"
+          type="button"
+        >
+          <svg
+            aria-hidden={true}
+            className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="KeyboardArrowRightIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</span>
+`;

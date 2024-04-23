@@ -62,11 +62,11 @@ export default function GridComponent({
       </Title>
       <DataGrid
         rows={data}
-        columns={COLUMNS}
+        columns={(COLUMNS || [])}
         sortingMode='server'
         onSortModelChange={sortOverride}
         autosizeOptions={{
-          columns: COLUMNS.map(({ field }) => field),
+          columns: (COLUMNS || []).map(({ field }) => field),
           includeOutliers: true,
           includeHeaders: false,
           expand: true,
