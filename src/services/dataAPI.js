@@ -46,9 +46,25 @@ export default class {
     return response.data;
   }
 
-  async saveById(id, adjustments) {
-    console.info('id', id);
-    console.info('adjustments', adjustments);
+  /**
+   * Fetch line item object by id
+   * @params
+   *  id: lineitem id
+   * @returns lineItemObj
+   */
+  async getLineItemById(id) {
+    const response = await this.client.get(`/data/${id}`);
+    return response.data;
+  }
+
+  /**
+    * Save Adjustment By Line Item ID
+    * @params
+    *  id: lineitem id
+    *  adjustments: currency adjustment
+    * @returns success: true on succesful save
+    */
+  async saveAdjustmentById(id, adjustments) {
     const data = {
       adjustments,
     };
@@ -56,6 +72,25 @@ export default class {
     return response.data;
   }
 
+  /**
+  * Find Query
+  * @params
+  *  search: searchText
+  * @returns [lineItemObj]
+  */
+  async query(query) {
+    const data = {
+      query,
+    };
+    const response = await this.client.post(`/data/query`, data);
+    return response.data;
+  }
+
+  /**
+    * Export data to file
+    * @params
+    *  type: csv|xlsx are supported
+    */
   async exportFile(type = 'csv') {
     const config = { responseType: 'blob' };
     const response = await this.client.get(`/data/export?type=${type}`, config);

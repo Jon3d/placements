@@ -72,7 +72,7 @@ export default function GridComponent({
           expand: true,
         }}
         processRowUpdate={(updatedRow, originalRow) => {
-          api.saveById(updatedRow.id, updatedRow.adjustments.toFixed(2));
+          api.saveAdjustmentById(updatedRow.id, updatedRow.adjustments.toFixed(2));
           return updatedRow;
         }}
       />

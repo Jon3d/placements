@@ -105,13 +105,29 @@ def create_app(config):
       'data': agg_data[start: (start + size)]
     }
     return Response(response=json.dumps(response), status=200,  mimetype='application/json')
+  
+  @app.route('/api/data/query', methods=['POST'])
+  def get_query():
+    json_data = request.get_json()
+    query = str(json_data['query'])
+    results = [] 
+    for item in copy.deepcopy(data):
+      for key, val in item.items(): 
+        if str(val).__contains__(query): 
+          results.append(item) 
+          break;
+
+    return Response(response=json.dumps(results), status=200,  mimetype='application/json')
+  
 
   @app.route('/api/data/find', methods=['GET'])
   def get_data_attr_by_name_and_value():
+    # Would be better supported by elasticsearch or graphql
     attr_name = request.args.get('name', default = 'campaign_name', type = str)
     attr_value_number = request.args.get('value_number', default = 0, type = int)
     attr_value_string = request.args.get('value_string', default = 0, type = str)
     retdata = [item for item in data if item[attr_name] == attr_value_string or item[attr_name] == attr_value_number]
+
     return Response(response=json.dumps(retdata), status=200,  mimetype='application/json')
   
   @app.route("/api/data/export", methods=['GET'])
@@ -138,8 +154,18 @@ def create_app(config):
       item = [item for item in data if int(item['id']) == int(id)]
       if len(item) == 1:
         item[0]['adjustments'] = float(json_data['adjustments'])
+      else:
+        return Response(response=json.dumps({'success': False}), status=400,  mimetype='application/json')
       # TODO: handle failures, actually save data, not use s3
       return Response(response=json.dumps({'success': True}), status=200,  mimetype='application/json')
+
+  @app.route("/api/data/<id>", methods=['GET'])
+  def get_record(id):
+      item = [item for item in data if int(item['id']) == int(id)]
+      if len(item) == 0: 
+        return Response(response=json.dumps({'success': False}), status=400,  mimetype='application/json')
+      # TODO: handle failures, actually save data, not use s3
+      return Response(response=json.dumps(item[0]), status=200,  mimetype='application/json')
   
   return app
   
