@@ -75,13 +75,14 @@ def test_data_aggregate(client):
     rv = client.get('/api/data/aggregate')
     assert rv.status_code == 200
     data = json.loads(rv.data.decode())
-    assert len(data) == 3
+    assert len(data) == 4
 
 def test_data_aggregate_size(client):
     rv = client.get('/api/data/aggregate?size=2')
     assert rv.status_code == 200
     data = json.loads(rv.data.decode())
-    assert len(data) == 2
+    print(data)
+    assert len(data["data"]) == 2
 
 def test_data_aggregate_start(client):
     rv = client.get('/api/data/aggregate')
@@ -91,3 +92,21 @@ def test_data_aggregate_start(client):
     data = json.loads(rv.data.decode())
     data2 = json.loads(rv2.data.decode())
     assert data != data2
+
+def test_query_multi_match(client):
+    data = {'query': 'Satterfield-Turcotte '}
+    rv = client.post('/api/data/query', data=json.dumps(data), headers={"Content-Type": "application/json"})
+    data = json.loads(rv.data.decode())
+    assert len(data) == 35
+
+def test_query_single_match(client):
+    data = {'query': 'Practical Plastic Shirt - 24a4'}
+    rv = client.post('/api/data/query', data=json.dumps(data), headers={"Content-Type": "application/json"})
+    data = json.loads(rv.data.decode())
+    assert len(data) == 1
+
+def test_get_by_id(client):
+    rv = client.get('/api/data/1')
+    data = json.loads(rv.data.decode())
+    print(data["id"])
+    assert data["id"] == 1
