@@ -13,7 +13,7 @@ from decimal import Decimal, ROUND_HALF_UP
 # Data would be better served from different storage such as sql or 
 # Dynamo but for time saving, just using s3 for test
 # API key shouldn't be stored in repo
-API_KEY = 'zJl5BRr6JE2oQzUQxrRTx9EWHMDyOjpy5QBd0ZJp'
+API_KEY = ''
 
 def create_app(config):
   app = Flask(__name__)
