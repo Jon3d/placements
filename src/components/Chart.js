@@ -1,77 +1,61 @@
-import * as React from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import { useTheme } from '@mui/material/styles';
-import { LineChart, axisClasses } from '@mui/x-charts';
+import { BarChart, axisClasses } from '@mui/x-charts';
+import CircularProgress from '@mui/material/CircularProgress';
+import Pagination from '@mui/material/Pagination';
 
 import Title from './Title';
 
-// Generate Sales Data
-function createData(time, amount) {
-  return { time, amount: amount ?? null };
-}
-
-const data = [
-  createData('00:00', 0),
-  createData('03:00', 300),
-  createData('06:00', 600),
-  createData('09:00', 800),
-  createData('12:00', 1500),
-  createData('15:00', 2000),
-  createData('18:00', 2400),
-  createData('21:00', 2400),
-  createData('24:00'),
-];
-
-export default function Chart() {
+export default function Chart({ data = [], count, setPage }) {
   const theme = useTheme();
+
+  const format = (row, data) => {
+    data[0].data.push(row.booked_amount.toFixed(2));
+    data[1].data.push(row.actual_amount.toFixed(2));
+    data[2].data.push(row.adjustments.toFixed(2));
+  }
+
+  const fdata = data.reduce((aggs, row) => {
+    aggs.labels.push(`Campaign ${row.campaign_id}`);
+    format(row, aggs.data);
+    return aggs;
+  }, { labels: [], data: [{ data: [], label: 'Booked Amt' }, { data: [], label: 'Actual Amt' }, { data: [], label: 'Adjustments' }] });
+
+  const getBarChart = () => {
+    if (!data || data.length === 0) return <span className='chart-placeholder'><CircularProgress /></span>;
+    return (
+      <BarChart
+        series={fdata.data}
+        margin={{
+          top: 30,
+          right: 20,
+          left: 90,
+          bottom: 30,
+        }}
+        xAxis={[{
+          scaleType: 'band',
+          data: fdata.labels,
+        }]}
+        sx={{
+          [`.${axisClasses.root} line`]: { stroke: theme.palette.text.secondary },
+          [`.${axisClasses.root} text`]: { fill: theme.palette.text.secondary },
+          [`& .${axisClasses.left} .${axisClasses.label}`]: {
+            transform: 'translateX(-25px)',
+          },
+        }}
+      />
+    );
+  }
 
   return (
     <React.Fragment>
-      <Title>Today</Title>
-      <div style={{ width: '100%', flexGrow: 1, overflow: 'hidden' }}>
-        <LineChart
-          dataset={data}
-          margin={{
-            top: 16,
-            right: 20,
-            left: 70,
-            bottom: 30,
-          }}
-          xAxis={[
-            {
-              scaleType: 'point',
-              dataKey: 'time',
-              tickNumber: 2,
-              tickLabelStyle: theme.typography.body2,
-            },
-          ]}
-          yAxis={[
-            {
-              label: 'Sales ($)',
-              labelStyle: {
-                ...theme.typography.body1,
-                fill: theme.palette.text.primary,
-              },
-              tickLabelStyle: theme.typography.body2,
-              max: 2500,
-              tickNumber: 3,
-            },
-          ]}
-          series={[
-            {
-              dataKey: 'amount',
-              showMark: false,
-              color: theme.palette.primary.light,
-            },
-          ]}
-          sx={{
-            [`.${axisClasses.root} line`]: { stroke: theme.palette.text.secondary },
-            [`.${axisClasses.root} text`]: { fill: theme.palette.text.secondary },
-            [`& .${axisClasses.left} .${axisClasses.label}`]: {
-              transform: 'translateX(-25px)',
-            },
-          }}
-        />
+      <Title>Amounts</Title>
+      <div id='campaign-bar-chart-wrapper' style={{ width: '100%', flexGrow: 1, overflow: 'hidden' }}>
+        {getBarChart()}
       </div>
+      <span className='chart-paginator'>
+        <Pagination count={count} onChange={setPage} />
+      </span>
     </React.Fragment>
   );
 }

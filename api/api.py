@@ -12,7 +12,7 @@ from decimal import Decimal, ROUND_HALF_UP
 # API key for aws api gateway passthrough for s3 data
 # Data would be better served from different storage such as sql or 
 # Dynamo but for time saving, just using s3 for test
-# Also key data shouldn't be stored in repo
+# API key shouldn't be stored in repo
 API_KEY = 'zJl5BRr6JE2oQzUQxrRTx9EWHMDyOjpy5QBd0ZJp'
 
 def create_app(config):
@@ -42,16 +42,16 @@ def create_app(config):
         if lineitem[aggregate_on] in retdata:
           currentBooked = getDecimal(retdata[lineitem[aggregate_on]]['booked_amount'])
           nextBooked = getDecimal(lineitem['booked_amount'])
-          retdata[lineitem[aggregate_on]]['booked_amount'] = getDecimal(currentBooked + nextBooked)
+          retdata[lineitem[aggregate_on]]['booked_amount'] = getDecimal(currentBooked) + getDecimal(nextBooked)
           currentActual = getDecimal(retdata[lineitem[aggregate_on]]['actual_amount'])
           nextActual = getDecimal(lineitem['actual_amount'])
-          retdata[lineitem[aggregate_on]]['actual_amount'] = getDecimal(currentActual + nextActual)
+          retdata[lineitem[aggregate_on]]['actual_amount'] = getDecimal(currentActual) + getDecimal(nextActual)
           currentActual = getDecimal(retdata[lineitem[aggregate_on]]['actual_amount'])
           nextActual = getDecimal(lineitem['actual_amount'])
-          retdata[lineitem[aggregate_on]]['actual_amount'] = getDecimal(currentActual + nextActual)
+          retdata[lineitem[aggregate_on]]['actual_amount'] = getDecimal(currentActual) + getDecimal(nextActual)
           currentAdjustments = getDecimal(retdata[lineitem[aggregate_on]]['adjustments'])
           nextAdjustments = getDecimal(lineitem['adjustments'])
-          retdata[lineitem[aggregate_on]]['adjustments'] = getDecimal(currentAdjustments + nextAdjustments)
+          retdata[lineitem[aggregate_on]]['adjustments'] = getDecimal(currentAdjustments) + getDecimal(nextAdjustments)
           if aggregate_on != 'line_item_name':
             retdata[lineitem[aggregate_on]]['line_item_names'].append(lineitem['line_item_name'])
         else: 
@@ -80,8 +80,6 @@ def create_app(config):
       size = request.args.get('size', default = 10, type = int)
       reverse = request.args.get('reverse', default = False, type = bool)
       sort = request.args.get('sort', default = 'campaign_id', type = str)
-      print("reverse")
-      print(reverse)
       new_data = sorted(data, key=lambda x: x[sort], reverse=reverse)
       response = {
         'size': size,
@@ -96,9 +94,17 @@ def create_app(config):
     start = request.args.get('start', default = 0, type = int)
     size = request.args.get('size', default = 10, type = int)
     aggregate_on = request.args.get('aggregate_on', default = 'campaign_id', type = str)
-    return_data = getAggregate(data, aggregate_on)
-    return_data_paginated = return_data[start: (start + size)];
-    return Response(response=json.dumps(return_data_paginated), status=200,  mimetype='application/json')
+    sort = request.args.get('sort', default = 'actual_amount', type = str)
+    reverse = request.args.get('reverse', default = False, type = bool)
+    agg_data = getAggregate(data, aggregate_on)
+    agg_data = sorted(agg_data, key=lambda x: x[sort], reverse=reverse)
+    response = {
+      'size': size,
+      'start': start,
+      'total': len(agg_data),
+      'data': agg_data[start: (start + size)]
+    }
+    return Response(response=json.dumps(response), status=200,  mimetype='application/json')
 
   @app.route('/api/data/find', methods=['GET'])
   def get_data_attr_by_name_and_value():
@@ -124,6 +130,16 @@ def create_app(config):
         ]
         rData.append(row)
       return excel.make_response_from_array(rData, type, file_name="export_data")
+  
+  @app.route("/api/data/<id>", methods=['PUT'])
+  def update_record(id):
+      # Supports xlsx, and csv
+      json_data = request.get_json()
+      item = [item for item in data if int(item['id']) == int(id)]
+      if len(item) == 1:
+        item[0]['adjustments'] = float(json_data['adjustments'])
+      # TODO: handle failures, actually save data, not use s3
+      return Response(response=json.dumps({'success': True}), status=200,  mimetype='application/json')
   
   return app
   

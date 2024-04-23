@@ -19,8 +19,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { mainListItems, secondaryListItems } from './components/listItems';
 import Chart from './components/Chart';
-import Deposits from './components/Deposits';
-import LineItems from './components/LineItems';
+import { GridComponent } from 'components';
 import { DataAPI } from 'services';
 
 function Copyright(props) {
@@ -85,19 +84,22 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 const defaultTheme = createTheme();
 
 export default function PageLayout() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
+  const [aggsData, setAggsData] = useState([]);
   const [start, setStart] = useState(0);
   const [size, setSize] = useState(10);
-  const [total, setTotal] = useState(null);
+  const [total, setTotal] = useState(0);
   const [open, setOpen] = useState(true);
   const [sort, setSort] = useState({ key: 'campaign_id', reverse: false });
   const [loading, setLoading] = useState(false);
+  const [chartCount, setChartCount] = useState(0);
   const api = new DataAPI();
 
   useEffect(() => {
     const status = { mounted: true };
+    setLoading(true);
     (async () => {
-      // Can run twice on initial load in development mode, this shouldn't happen in prod
+      // Can run twice on initial load in development mode, this shouldn't happen in a prod env
       const params = {
         size,
         start,
@@ -105,10 +107,14 @@ export default function PageLayout() {
         ...(sort.reverse && { reverse: true }) //Include reverse key only if reversed
       }
       const r = await api.getData(params);
+      const aggs = await api.getAggregations({ reverse: true });
+      setAggsData(aggs.data)
+      setChartCount(Math.ceil(aggs.total / aggs.size))
       setData(r.data);
       setStart(r.start);
       setSize(r.size);
       setTotal(r.total);
+      setLoading(false);
     })();
     return () => {
       status.mounted = false;
@@ -118,6 +124,12 @@ export default function PageLayout() {
   const toggleDrawer = () => {
     setOpen(!open);
   };
+
+  const setChartPage = async (e, newPage) => {
+    e.preventDefault();
+    const aggs = await api.getAggregations({ reverse: true, start: 10 * newPage });
+    setAggsData(aggs.data)
+  }
 
   const setPage = (e, newPage) => {
     e.preventDefault();
@@ -212,35 +224,22 @@ export default function PageLayout() {
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
               {/* Chart */}
-              <Grid item xs={12} md={8} lg={9}>
+              <Grid item xs={12}>
                 <Paper
                   sx={{
                     p: 2,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 240,
+                    height: 300,
                   }}
                 >
-                  <Chart />
-                </Paper>
-              </Grid>
-              {/* Recent Deposits */}
-              <Grid item xs={12} md={4} lg={3}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    height: 240,
-                  }}
-                >
-                  <Deposits />
+                  <Chart data={aggsData} count={chartCount} setPage={setChartPage} />
                 </Paper>
               </Grid>
               {/* Recent Orders */}
               <Grid item xs={12}>
                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                  <LineItems
+                  <GridComponent
                     data={data}
                     pagination={{ start, size, total }}
                     setPage={setPage}

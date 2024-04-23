@@ -17,6 +17,10 @@
     }
   }
 
+  .MuiDataGrid-footerContainer {
+    display: none;
+  }
+
   .download-campaign-data:hover {
     color: darkslategray;
   }
@@ -50,5 +54,15 @@
     .sort-direction-arrow:hover {
       text-decoration: underline darkslategray;
     }
+  }
+}
+
+#campaign-bar-chart-wrapper {
+  .chart-placeholder {
+    margin-left: 45%;
+    margin-top: 30%;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
   }
 }
